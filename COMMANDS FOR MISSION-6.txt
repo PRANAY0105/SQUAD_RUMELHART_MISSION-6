@@ -1,0 +1,24 @@
+cd C:\Users\GALVA\Downloads\CONVERSATIONAL AI\AURA_squad_submission-6\AURA_squad_submission6
+
+
+cd ..\01_Data_Specialist
+python -m unittest -v
+python evaluation_demo.py
+type sample_trajectories.jsonl
+
+
+cd ..\02_Protocol_Specialist
+python -m unittest -v
+
+
+cd ..\03_Security_Sentinel
+python -m unittest -v
+python anomaly_06_demo.py
+
+
+cd 04_Systems_Architect
+python -m unittest -v
+python run_mission.py
+
+cd C:\Users\GALVA\Downloads\CONVERSATIONAL AI\AURA_squad_submission-6\AURA_squad_submission6
+jupyter notebook ps06_solution.ipynb

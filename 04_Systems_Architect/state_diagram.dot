@@ -1,0 +1,14 @@
+digraph AgentStateMachine {
+  rankdir=LR;
+  start [shape=point];
+  start -> IDLE;
+  ACTING -> OBSERVING [label="tool_error"];
+  ACTING -> OBSERVING [label="tool_ok"];
+  DELIBERATING -> DONE [label="decide_final"];
+  DELIBERATING -> ACTING [label="decide_tool"];
+  IDLE -> DELIBERATING [label="start"];
+  OBSERVING -> DELIBERATING [label="continue"];
+  "any non-terminal" -> HALTED [label="halt", style=dashed];
+  "any non-terminal" -> FAILED [label="fail", style=dashed];
+  "terminal" -> IDLE [label="reset", style=dashed];
+}
